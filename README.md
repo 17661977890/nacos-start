@@ -60,4 +60,50 @@ SpringCloudConfig和 NacosConfig这种统一配置服务在springboot项目中�
 </dependency>
 ````
 
-#### nacos spring 看文
+#### nacos spring 看文档
+
+
+#### spring cloud alibaba sentinel 学习
+
+* sentinel 控制台安装和服务连接：https://blog.csdn.net/weixin_37677822/article/details/87697076
+  * 启动控制台：
+    * 在github 下载zip文件，本地解压，git-bash 访问文件到sentinel-dashboard项目下
+    * mvn clean package 打jar包，在dashboard目录下的target目录下会有此jar包
+    * java -jar sentinel-dashboard.jar --server.port=8084 启动此jar（即控制台项目） 
+    * 访问http://localhost:8084/#/dashboard/ 即可查看控制台，目前是空的
+  * 服务连接：
+    * 
+    ````
+    pom加：
+    
+    <dependency>
+        <groupId>org.springframework.cloud</groupId>
+        <artifactId>spring-cloud-starter-alibaba-sentinel</artifactId>
+        <version>0.2.1.RELEASE</version>
+    </dependency>
+    
+    application.properties:
+    
+    spring.cloud.sentinel.transport.port= 8719
+    spring.cloud.sentinel.transport.dashboard=127.0.0.1:8084
+
+    ````
+  * 效果测试：
+     * 创建ProviderClient 接口和抽象方法test，绑定service-provider服务，consumer启动类加@EnableFeignClients 开起feign调用功能
+     * 生产者和消费者分别创建test方法，postman测试调用test方法
+     * 再看sentinel控制台，就会有对应的数据了
+     * 可以利用postman或其他工具进行压力测试，看sentinel的流量控制等功能
+
+* 2.Sentinel：阿里巴巴研发的分布式系统流量哨兵。
+   * (1)官方文档：https://github.com/alibaba/Sentinel/wiki/%E4%BB%8B%E7%BB%8D
+   * (2)主要功能：
+     *  ①流量控制、
+     *  ②熔断降级、
+     *  ③系统负载保护、
+     *  ④实时数据监控等
+  * (3)构成：核心库和控制台。
+  * (4)使用方法：
+    * ①定义规则，就是定义某个资源保护的规则，比如限流策略、降级策略等
+    * ②访问资源
+    
+ * 3.Sentinel 和 Hystrix 的对比： https://yq.aliyun.com/articles/623424

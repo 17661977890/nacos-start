@@ -1,5 +1,5 @@
 
-# nacos 的学习
+## nacos 的学习
 
 #### 官方文档： https://nacos.io/zh-cn/docs
 
@@ -63,7 +63,7 @@ SpringCloudConfig和 NacosConfig这种统一配置服务在springboot项目中�
 #### nacos spring 看文档
 
 
-#### spring cloud alibaba sentinel 学习
+## spring cloud alibaba sentinel 学习
 
 * sentinel 控制台安装和服务连接：https://blog.csdn.net/weixin_37677822/article/details/87697076
   * 启动控制台：

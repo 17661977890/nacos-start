@@ -35,12 +35,18 @@
             <artifactId>spring-cloud-starter-openfeign</artifactId>
             <version>${spring-cloud-openfeign.version}</version>
         </dependency>
-
+        <!--sentinel哨兵依赖-->
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-alibaba-sentinel</artifactId>
             <version>0.2.1.RELEASE</version>
         </dependency>
+        <!--把sentinel的相关规则配置在nacos，也可以用apollo导入不同依赖-->
+<!--        <dependency>-->
+<!--            <groupId>com.alibaba.csp</groupId>-->
+<!--            <artifactId>sentinel-datasource-nacos</artifactId>-->
+<!--            <version>1.5.2</version>-->
+<!--        </dependency>-->
 
 
     </dependencies>

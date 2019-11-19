@@ -62,6 +62,8 @@ SpringCloudConfig和 NacosConfig这种统一配置服务在springboot项目中�
 
 #### nacos spring 看文档
 
+![image](https://github.com/17661977890/nacos-start/blob/master/image/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20191119131759.png)
+
 
 ## spring cloud alibaba sentinel 学习
 

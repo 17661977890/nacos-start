@@ -167,8 +167,8 @@ SpringCloudConfig和 NacosConfig这种统一配置服务在springboot项目中�
     limitApp：流控针对的调用来源，若为 default 则不区分调用来源
     grade：限流阈值类型（QPS 或并发线程数）；0代表根据并发数量来限流，1代表根据QPS来进行流量控制
     count：限流阈值
-    strategy：调用关系限流策略
-    controlBehavior：流量控制效果（直接拒绝、Warm Up、匀速排队）
+    strategy：调用关系限流策略 流控模式，0：直接，1：关联，2：链路
+    controlBehavior：流量控制效果（0 直接拒绝、1 Warm Up、2 匀速排队）
     clusterMode：是否为集群模式
     
     ````
